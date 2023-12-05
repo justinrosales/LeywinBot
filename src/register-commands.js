@@ -4,15 +4,6 @@ const { REST, Routes, ApplicationCommandOptionType } = require("discord.js");
 
 const commands = [
   {
-    name: "hey",
-    description: "Replies with hey!",
-  },
-  {
-    name: "nanny",
-    description:
-      'Replies with "THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES"',
-  },
-  {
     name: "add",
     description: "Adds two numbers.",
     options: [
@@ -66,3 +57,17 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
     console.log(`There was an error: ${error}`);
   }
 })();
+
+/*
+
+~~ TEMPORARY GONNA CHANGE LATER ~~
+  {
+    name: "hey",
+    description: "Replies with hey!",
+  },
+  {
+    name: "nanny",
+    description:
+      'Replies with "THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES"',
+  },
+*/
