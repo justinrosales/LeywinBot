@@ -1,6 +1,5 @@
 # About
 
----
 
 ## What I want the bot to achieve 🤔
 
