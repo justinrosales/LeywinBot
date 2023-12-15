@@ -1,5 +1,5 @@
 # About
-
+idk but f it we ball 
 
 ## What I want the bot to achieve 🤔
 
