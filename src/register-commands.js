@@ -1,73 +1,32 @@
-require("dotenv").config(); //gives access to environment variables
+// Load environment variables from a .env file
+require("dotenv").config(); // Gives access to environment variables
 
+// Import necessary dependencies from the "discord.js" library
 const { REST, Routes, ApplicationCommandOptionType } = require("discord.js");
 
-const commands = [
-  {
-    name: "add",
-    description: "Adds two numbers.",
-    options: [
-      {
-        name: "first-number",
-        description: "The first number.",
-        type: ApplicationCommandOptionType.Number,
-        choices: [
-          {
-            name: "one",
-            value: 1,
-          },
-          {
-            name: "two",
-            value: 2,
-          },
-          {
-            name: "three",
-            value: 3,
-          },
-        ],
-        required: true,
-      },
-      {
-        name: "second-number",
-        description: "The second number.",
-        type: ApplicationCommandOptionType.Number,
-        required: true,
-      },
-    ],
-  },
-];
-
-// registers slash commands using REST
+// Create a REST client for interacting with Discord's API
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
 
+// Asynchronous function to register slash commands
 (async () => {
   try {
+    // Log a message indicating the registration process has started
     console.log("Registering slash commands...");
 
+    // Use the REST client to send a PUT request to register slash commands for a specific guild
     await rest.put(
       Routes.applicationGuildCommands(
-        process.env.CLIENT_ID,
-        process.env.GUILD_ID
+        process.env.CLIENT_ID, // The client ID of the Discord application
+        process.env.GUILD_ID // The guild ID where the slash commands will be registered
       ),
-      { body: commands }
+      { body: commands } // The array of slash commands to be registered (commands variable should be defined)
     );
 
+    // Log a message indicating that slash commands were registered successfully
     console.log("Slash commands were registered successfully!");
   } catch (error) {
+    // Log an error message if there is an issue during the registration process
     console.log(`There was an error: ${error}`);
   }
 })();
 
-/*
-
-~~ TEMPORARY GONNA CHANGE LATER ~~
-  {
-    name: "hey",
-    description: "Replies with hey!",
-  },
-  {
-    name: "nanny",
-    description:
-      'Replies with "THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES"',
-  },
-*/

@@ -1,70 +1,30 @@
+// Load environment variables from a .env file
 require("dotenv").config();
 
-// the necessary intents (perms for discord bot)
+// Import necessary dependencies from the "discord.js" library
 const {
   Client,
   IntentsBitField,
   GuildScheduledEvent,
   MembershipScreeningFieldType,
 } = require("discord.js");
+
+// Import the event handler function
 const eventHandler = require("./handlers/eventHandler");
 
+// Create a new Discord client instance with specified intents
 const client = new Client({
+  // Intents define the permissions your bot has in a Discord server
   intents: [
-    IntentsBitField.Flags.Guilds,
-    IntentsBitField.Flags.GuildMembers,
-    IntentsBitField.Flags.GuildMessages,
-    IntentsBitField.Flags.MessageContent,
+    IntentsBitField.Flags.Guilds, // Access to server information
+    IntentsBitField.Flags.GuildMembers, // Access to member information
+    IntentsBitField.Flags.GuildMessages, // Access to message-related events
+    IntentsBitField.Flags.MessageContent, // Access to message content
   ],
 });
 
+// Attach event handlers to the client using the event handler function
 eventHandler(client);
 
+// Log in to Discord using the bot token from the environment variables
 client.login(process.env.TOKEN);
-
-/*
-
-// ~~ TEMPORARY CODE GONNA CHANGE LATER ~~ 
-
-// shows that bot is online in terminal
-client.on("ready", (c) => {
-  console.log(`😊 ${c.user.tag} is online.`);
-});
-
-// responds with "Hey!" if user says hello in chat
-client.on("messageCreate", (message) => {
-  if (message.author.bot) {
-    return;
-  }
-
-  if (message.content == "hello") {
-    message.reply("Hey!");
-  }
-});
-
-// custom responses if user uses slash commands
-client.on("interactionCreate", (interaction) => {
-  if (!interaction.isChatInputCommand()) return;
-  // console.log(interaction.commandName) <- used for debugging
-
-
-  if (interaction.commandName === "hey") {
-    interaction.reply("hey!");
-  }
-  
-  if (interaction.commandName === "nanny") {
-    interaction.reply(
-      "THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES"
-    );
-  }
-
-
-  if (interaction.commandName === "add") {
-    const num1 = interaction.options.get("first-number").value;
-    const num2 = interaction.options.get("second-number").value;
-
-    interaction.reply(`The sum is ${num1 + num2}`);
-    console.log(num1);
-  }
-});
-*/
