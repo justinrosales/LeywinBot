@@ -4,7 +4,7 @@ module.exports = {
 
   callback: (client, interaction) => {
     interaction.reply(
-      `THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES`
+      `THE GOAT, MULTI-TALENTED LEAGUE ATHLETE HARDSTUCK ALL ROLES!`
     );
   },
 };

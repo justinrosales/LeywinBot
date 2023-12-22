@@ -3,6 +3,6 @@ module.exports = {
   description: "харош blyat",
 
   callback: (client, interaction) => {
-    interaction.reply(`The beloved, the soul, the sacred heart of Aincrad`);
+    interaction.reply(`The beloved, the soul, the sacred heart of Aincrad.`);
   },
 };

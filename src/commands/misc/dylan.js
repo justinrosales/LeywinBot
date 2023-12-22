@@ -1,10 +1,8 @@
 module.exports = {
   name: "dylan",
-  description: "loool",
+  description: "lol",
 
   callback: (client, interaction) => {
-    interaction.reply(
-      `The SnapChat king, always keeps the streaks going. The OG`
-    );
+    interaction.reply(`The Snapchat king, always keeps the streaks going.`);
   },
 };
