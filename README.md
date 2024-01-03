@@ -1,12 +1,13 @@
 # About
-idk but f--- it we ball 
+
+idk but f--- it we ball
 
 ## What I want the bot to achieve 🤔
 
 #### All Purpose Functions
 
 - [x] **Moderation:** Manage messages, kick/ban users, auto assign roles.
-- [ ] **Custom Embeds:** Set up custom welcome messages
+- [x] **Custom Embeds:** Set up custom welcome messages
 - [x] **Slash Commands:** Unique interactions, _/nanny_ to shout out my :goat: NANNYZPQ!
 
 #### Would be nice
@@ -20,11 +21,7 @@ idk but f--- it we ball
 - npm init -y
 - npm install discord.js
 
-## My Extensions
+## Extensions
 
 - Prettier
 - Material Icon Theme - Philipp Kief
-- Markdown Preview - Yiyi Wang
-- Markdown Emoji - Matt Bierner
-- Markdown Checkboxes - Matt Bierner
-- Markdown Footnotes - Matt Bierner
