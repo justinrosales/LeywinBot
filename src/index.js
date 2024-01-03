@@ -9,6 +9,9 @@ const {
   MembershipScreeningFieldType,
 } = require("discord.js");
 
+// added mongoose to connect to database
+const mongoose = require("mongoose");
+
 // Import the event handler function
 const eventHandler = require("./handlers/eventHandler");
 
@@ -23,8 +26,16 @@ const client = new Client({
   ],
 });
 
-// Attach event handlers to the client using the event handler function
-eventHandler(client);
+(async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("Connected to Database.");
+
+    eventHandler(client);
+  } catch (error) {
+    console.log(`Error: ${error}`);
+  }
+})();
 
 // Log in to Discord using the bot token from the environment variables
 client.login(process.env.TOKEN);
