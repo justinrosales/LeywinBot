@@ -1,7 +1,3 @@
-# About
-
-idk but f--- it we ball
-
 ## What I want the bot to achieve 🤔
 
 #### All Purpose Functions
@@ -21,7 +17,14 @@ idk but f--- it we ball
 - npm init -y
 - npm install discord.js
 
+## Files Not Included
+
+- .env
+- .prettierignore
+- .config.json
+
 ## Extensions
 
 - Prettier
 - Material Icon Theme - Philipp Kief
+- Markdown Checkboxes - Matt Bierner
