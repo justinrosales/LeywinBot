@@ -4,7 +4,7 @@ require("dotenv").config();
 // Import necessary dependencies from the "discord.js" library
 const { Client, IntentsBitField } = require("discord.js");
 
-// added mongoose to connect to database
+// Add mongoose to connect to database
 const mongoose = require("mongoose");
 
 // Import the event handler function
@@ -26,12 +26,9 @@ const client = new Client({
     console.log("Connected to DB.");
 
     eventHandler(client);
-    client.login(process.env.TOKEN); // Log in to Discord using the bot token from the environment variables
+    // Log in to Discord using the bot token from the environment variables
+    client.login(process.env.TOKEN);
   } catch (error) {
     console.log(`Error: ${error}`);
   }
 })();
-
-//eventHandler(client);
-
-// Log in to Discord using the bot token from the environment variables
