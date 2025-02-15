@@ -1,4 +1,4 @@
-## What I want the bot to achieve 🤔
+## Roadmap
 
 #### All Purpose Functions
 
@@ -8,7 +8,6 @@
 
 #### Would be nice
 
-- [ ] **Play Music:** Might make another bot for this but I want this bot to do everything.
 - [ ] **Create Built-in Anime/Manga/Manhwa list:** Something similar to MAL but built into a discord bot. Allows users to keep track of their favorite reads/shows, rate them, and share them with other members in the server.
 
 ## Get Started
