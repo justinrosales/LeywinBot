@@ -4,7 +4,7 @@
 
 - [x] **Moderation:** Manage messages, kick/ban users, auto assign roles.
 - [x] **Custom Embeds:** Set up custom welcome messages
-- [x] **Slash Commands:** Unique interactions, _/nanny_ to shout out my :goat: NANNYZPQ!
+- [x] **Slash Commands:** Unique interactions, _/nanny_ to shout out my boy nathan.
 
 #### Would be nice
 
